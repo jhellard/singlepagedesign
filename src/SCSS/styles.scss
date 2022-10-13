@@ -1,4 +1,5 @@
 @use "./reset.scss";
+@use "./mixins.scss";
 
 // Colors
 
@@ -25,6 +26,8 @@ $font-lg: 40px;
 $font-md: 32px;
 $font-sm: 18px;
 
+$font-tablet-xl: 44px;
+
 $font-mobile-xl: 36px;
 $font-mobile-lg: 26px;
 $font-mobile-md: 24px;
@@ -35,17 +38,27 @@ $line-lg: 51px;
 $line-md: 40px;
 $line-sm: 28px;
 
+$line-tablet-xl: 55px;
+
 $line-mobile-xl: 45px;
 $line-mobile-md: 33px;
 $line-mobile-sm: 26px;
 
 button {
-  min-width: 176px;
-  min-height: 44px;
+  width: 176px;
+  height: 44px;
   border-radius: 28px;
   border: none;
   color: $lightCream;
   font-size: 0.875rem;
+  cursor: pointer;
+
+  @include mixins.md {
+    width: 228px;
+    height: 56px;
+    font-size: 1rem;
+    line-height: $line-sm;
+  }
 
   //TODO: Add Mixin for font size
 }
@@ -55,6 +68,10 @@ button {
 main {
   width: min(100% - 2rem, 1110px);
   margin-inline: auto;
+
+  @include mixins.md {
+    width: min(100% - 5rem, 1110px);
+  }
 }
 
 // Header, Footer
@@ -65,13 +82,27 @@ main {
   margin-top: 1rem;
   margin-bottom: 2rem;
 
+  @include mixins.md {
+    align-items: center;
+    margin-top: 2.125rem;
+    margin-bottom: 4rem;
+  }
+
   &__logo {
     max-height: 48px;
     margin-right: auto;
+
+    @include mixins.md {
+      max-height: 64px;
+    }
   }
 
   &__button {
     background-color: $black;
+
+    &:hover {
+      background-color: $galacticBlue;
+    }
   }
 }
 
@@ -80,10 +111,21 @@ main {
 .design {
   text-align: center;
   margin-bottom: 2rem;
+
+  @include mixins.md {
+    margin-bottom: 4rem;
+  }
+
   &__header {
     font-size: $font-mobile-xl;
     line-height: $line-mobile-xl;
     margin-bottom: 1rem;
+
+    @include mixins.md {
+      font-size: $font-tablet-xl;
+      line-height: $line-tablet-xl;
+      margin-bottom: 1.6875rem;
+    }
   }
 
   &__description {
@@ -91,6 +133,12 @@ main {
     line-height: $line-mobile-sm;
     color: $gray;
     padding-inline: 2rem;
+
+    @include mixins.md {
+      font-size: $font-sm;
+      line-height: $line-sm;
+      padding-inline: 3rem;
+    }
   }
 }
 
@@ -99,10 +147,19 @@ main {
 .skills {
   margin-bottom: 6.25rem;
 
+  @include mixins.md {
+    margin-bottom: 7.5rem;
+  }
+
   &__list {
     display: grid;
+    margin: 0;
     gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
+
+    @include mixins.md {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
   }
 
   &__item {
@@ -124,17 +181,23 @@ main {
     min-height: 22.75rem;
     background-image: url("../assets/pattern-graphic-design.svg");
     grid-column: span 2;
+
+    @include mixins.md {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
   }
 
   .ui {
     background-color: $summerYellow;
     background-image: url("../assets/pattern-ui-ux.svg");
-    min-height: 11.375rem;
+    height: 11.375rem;
   }
 
   .apps {
     background-color: $lightPink;
     background-image: url("../assets/pattern-apps.svg");
+    height: 11.375rem;
   }
 
   .illustrations {
@@ -149,6 +212,10 @@ main {
     background-image: url("../assets/pattern-photography.svg");
     grid-column: span 2;
     min-height: 11.375rem;
+
+    @include mixins.md {
+      grid-column: span 1;
+    }
   }
 
   .motion {
@@ -168,9 +235,29 @@ main {
   text-align: center;
   margin-bottom: 6.25rem;
 
+  @include mixins.md {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   &__portrait {
     max-height: 300px;
     margin-bottom: 2.5rem;
+
+    @include mixins.md {
+      position: absolute;
+      left: 138px;
+      max-height: 364px;
+      margin-bottom: 0;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__information {
+    @include mixins.md {
+      text-align: left;
+      grid-column: 2;
+    }
   }
 
   &__heading {
@@ -178,16 +265,32 @@ main {
     line-height: $line-mobile-md;
     padding-inline: 1px;
     margin-bottom: 1.5rem;
+
+    @include mixins.md {
+      font-size: $font-md;
+      line-height: $line-md;
+    }
   }
 
   &__description {
     color: $gray;
     line-height: $line-mobile-sm;
     margin-bottom: 1.5rem;
+
+    @include mixins.md {
+      font-size: $font-sm;
+      line-height: $line-sm;
+      //TODO: Fix padding
+      //   padding-inline: 3rem;
+    }
   }
 
   &__button {
     background-color: $lightRed;
+
+    &:hover {
+      background-color: $summerYellow;
+    }
   }
 }
 
@@ -205,20 +308,72 @@ main {
   border-radius: 10px;
   margin-bottom: 2.5rem;
 
+  @include mixins.md {
+    margin-bottom: 3.5rem;
+  }
+
   &__heading {
     font-size: $font-mobile-lg;
     line-height: $line-mobile-md;
     margin-bottom: 1.5rem;
+
+    @include mixins.md {
+      font-size: $font-md;
+      line-height: $line-md;
+    }
   }
 
   &__description {
     line-height: $font-mobile-lg;
     padding-inline: 1.25rem;
     margin-bottom: 1.5rem;
+
+    @include mixins.md {
+      font-size: $font-sm;
+      line-height: $line-sm;
+      padding-inline: 4rem;
+    }
   }
 
   &__button {
     background-color: $lightRed;
-    max-width: 176px;
+
+    &:hover {
+      background-color: $summerYellow;
+    }
+  }
+}
+
+// Work
+
+.work {
+  position: relative;
+  &__list {
+    display: flex;
+    overflow: hidden;
+    gap: 1rem;
+  }
+
+  &__item {
+    position: absolute;
+    img {
+      min-width: 270px;
+    }
+  }
+}
+
+// Footer
+
+.footer {
+  margin-bottom: 2rem;
+
+  @include mixins.md {
+    margin-bottom: 3.5rem;
+  }
+
+  &__button {
+    &:hover {
+      background-color: $galacticBlue;
+    }
   }
 }

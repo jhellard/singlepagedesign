@@ -34,38 +34,56 @@ const App = () => {
 
       <section className="artist">
         <img className="artist__portrait" src={Amy} alt="Headshot of Artist" />
-        <h2 className="artist__heading">
-          I'm Amy, and I'm love to work on your next project
-        </h2>
-        <p className="artist__description">
-          I love working with others to create beautiful design solutions. I've
-          desgined everything from brand illustrations to complete mobile apps.
-          I'm also handy with a camera!
-        </p>
-        <button className="artist__button">Free Consultation</button>
+        <article className="artist__information">
+          <h2 className="artist__heading">
+            I'm Amy, and I'm love to work on your next project
+          </h2>
+          <p className="artist__description">
+            I love working with others to create beautiful design solutions.
+            I've desgined everything from brand illustrations to complete mobile
+            apps. I'm also handy with a camera!
+          </p>
+          <button className="artist__button">Free Consultation</button>
+        </article>
       </section>
 
-      {/* <section>
-        <h2></h2>
-        <ul>
-          <li>
-            <img></img>
+      {/* <section className="work">
+        <h2 className="work__heading">My Work</h2>
+        <ul className="work__list">
+          <li className="work__item">
+            <img
+              src={require("./assets/image-slide-1.jpg")}
+              alt="Work Example"
+            />
           </li>
-          <li>
-            <img></img>
+          <li className="work__item">
+            <img
+              src={require("./assets/image-slide-2.jpg")}
+              alt="Work Example"
+            />
           </li>
-          <li>
-            <img></img>
+          <li className="work__item">
+            <img
+              src={require("./assets/image-slide-3.jpg")}
+              alt="Work Example"
+            />
           </li>
-          <li>
-            <img></img>
+          <li className="work__item">
+            <img
+              src={require("./assets/image-slide-4.jpg")}
+              alt="Work Example"
+            />
           </li>
-          <li>
-            <img></img>
+          <li className="work__item">
+            <img
+              src={require("./assets/image-slide-5.jpg")}
+              alt="Work Example"
+            />
           </li>
         </ul>
-        <button></button>
-        <button></button>
+
+        <button className="work__button"></button>
+        <button className="work__button"></button>
       </section> */}
 
       <section className="book">
