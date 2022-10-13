@@ -88,6 +88,10 @@ main {
     margin-bottom: 4rem;
   }
 
+  @include mixins.lg {
+    margin-bottom: 4.125rem;
+  }
+
   &__logo {
     max-height: 48px;
     margin-right: auto;
@@ -116,6 +120,10 @@ main {
     margin-bottom: 4rem;
   }
 
+  @include mixins.lg {
+    margin-bottom: 5rem;
+  }
+
   &__header {
     font-size: $font-mobile-xl;
     line-height: $line-mobile-xl;
@@ -125,6 +133,11 @@ main {
       font-size: $font-tablet-xl;
       line-height: $line-tablet-xl;
       margin-bottom: 1.6875rem;
+    }
+
+    @include mixins.lg {
+      font-size: $font-xl;
+      line-height: $line-xl;
     }
   }
 
@@ -139,6 +152,10 @@ main {
       line-height: $line-sm;
       padding-inline: 3rem;
     }
+
+    @include mixins.lg {
+      padding-inline: 12rem;
+    }
   }
 }
 
@@ -151,6 +168,10 @@ main {
     margin-bottom: 7.5rem;
   }
 
+  @include mixins.lg {
+    margin-bottom: 8.5rem;
+  }
+
   &__list {
     display: grid;
     margin: 0;
@@ -159,6 +180,10 @@ main {
 
     @include mixins.md {
       grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    @include mixins.lg {
+      grid-template-columns: 2fr 1fr 1fr 2fr;
     }
   }
 
@@ -223,6 +248,11 @@ main {
     background-image: url("../assets/pattern-motion-graphics.svg");
     grid-column: span 2;
     min-height: 11.375rem;
+
+    @include mixins.lg {
+      grid-column: 4;
+      grid-row: 1;
+    }
   }
 }
 
@@ -241,19 +271,26 @@ main {
   }
 
   &__portrait {
-    max-height: 300px;
+    max-height: 18.75rem;
     margin-bottom: 2.5rem;
 
     @include mixins.md {
       position: absolute;
       left: 138px;
-      max-height: 364px;
+      max-height: 22.75rem;
       margin-bottom: 0;
       transform: translate(-50%, -50%);
     }
+
+    @include mixins.lg {
+      position: relative;
+      max-height: 27.8125rem;
+      left: 0;
+      transform: none;
+    }
   }
 
-  &__information {
+  &__info {
     @include mixins.md {
       text-align: left;
       grid-column: 2;
@@ -270,6 +307,12 @@ main {
       font-size: $font-md;
       line-height: $line-md;
     }
+
+    @include mixins.lg {
+      font-size: $font-lg;
+      line-height: $line-lg;
+      margin-bottom: 2.125rem;
+    }
   }
 
   &__description {
@@ -282,6 +325,10 @@ main {
       line-height: $line-sm;
       //TODO: Fix padding
       //   padding-inline: 3rem;
+    }
+
+    @include mixins.lg {
+      margin-bottom: 2rem;
     }
   }
 
@@ -312,6 +359,18 @@ main {
     margin-bottom: 3.5rem;
   }
 
+  @include mixins.lg {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  &__info {
+    @include mixins.lg {
+      padding-left: 4rem;
+    }
+  }
+
   &__heading {
     font-size: $font-mobile-lg;
     line-height: $line-mobile-md;
@@ -333,6 +392,11 @@ main {
       line-height: $line-sm;
       padding-inline: 4rem;
     }
+
+    @include mixins.lg {
+      padding: 0;
+      max-width: 550px;
+    }
   }
 
   &__button {
@@ -340,6 +404,10 @@ main {
 
     &:hover {
       background-color: $summerYellow;
+    }
+
+    @include mixins.lg {
+      margin-right: 5.9375rem;
     }
   }
 }

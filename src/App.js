@@ -34,7 +34,7 @@ const App = () => {
 
       <section className="artist">
         <img className="artist__portrait" src={Amy} alt="Headshot of Artist" />
-        <article className="artist__information">
+        <article className="artist__info">
           <h2 className="artist__heading">
             I'm Amy, and I'm love to work on your next project
           </h2>
@@ -87,12 +87,14 @@ const App = () => {
       </section> */}
 
       <section className="book">
-        <h3 className="book__heading">Book a call with me</h3>
-        <p className="book__description">
-          I'd love to have a chat to see how I can help you. The best first step
-          is for us to discuss your project during a free consultation. Then we
-          can move forward from there.
-        </p>
+        <article className="book__info">
+          <h3 className="book__heading">Book a call with me</h3>
+          <p className="book__description">
+            I'd love to have a chat to see how I can help you. The best first
+            step is for us to discuss your project during a free consultation.
+            Then we can move forward from there.
+          </p>
+        </article>
         <button className="book__button">Free Consultation</button>
       </section>
 
