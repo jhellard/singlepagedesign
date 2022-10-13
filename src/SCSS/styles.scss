@@ -1,0 +1,224 @@
+@use "./reset.scss";
+
+// Colors
+
+$galacticBlue: #755cde;
+$summerYellow: #f6a560;
+$lightPink: #f39e9e;
+$lightRed: #eb7565;
+$cyan: #61c4b7;
+$darkPurple: #552049;
+$black: #030303;
+$gray: #7a746e;
+$lightCream: #fff7f0;
+$white: #ffffff;
+
+// Globals
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: $lightCream;
+}
+
+$font-xl: 56px;
+$font-lg: 40px;
+$font-md: 32px;
+$font-sm: 18px;
+
+$font-mobile-xl: 36px;
+$font-mobile-lg: 26px;
+$font-mobile-md: 24px;
+$font-mobile-sm: 16px;
+
+$line-xl: 70px;
+$line-lg: 51px;
+$line-md: 40px;
+$line-sm: 28px;
+
+$line-mobile-xl: 45px;
+$line-mobile-md: 33px;
+$line-mobile-sm: 26px;
+
+button {
+  min-width: 176px;
+  min-height: 44px;
+  border-radius: 28px;
+  border: none;
+  color: $lightCream;
+  font-size: 0.875rem;
+
+  //TODO: Add Mixin for font size
+}
+
+// Main
+
+main {
+  width: min(100% - 2rem, 1110px);
+  margin-inline: auto;
+}
+
+// Header, Footer
+
+.header,
+.footer {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  &__logo {
+    max-height: 48px;
+    margin-right: auto;
+  }
+
+  &__button {
+    background-color: $black;
+  }
+}
+
+// Design
+
+.design {
+  text-align: center;
+  margin-bottom: 2rem;
+  &__header {
+    font-size: $font-mobile-xl;
+    line-height: $line-mobile-xl;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: $font-mobile-sm;
+    line-height: $line-mobile-sm;
+    color: $gray;
+    padding-inline: 2rem;
+  }
+}
+
+// Skills
+
+.skills {
+  margin-bottom: 6.25rem;
+
+  &__list {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    max-width: 100%;
+    font-weight: bold;
+    color: $white;
+    font-size: $font-mobile-md;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-position: top 24px right 24px;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .graphic {
+    background-color: $galacticBlue;
+    min-height: 22.75rem;
+    background-image: url("../assets/pattern-graphic-design.svg");
+    grid-column: span 2;
+  }
+
+  .ui {
+    background-color: $summerYellow;
+    background-image: url("../assets/pattern-ui-ux.svg");
+    min-height: 11.375rem;
+  }
+
+  .apps {
+    background-color: $lightPink;
+    background-image: url("../assets/pattern-apps.svg");
+  }
+
+  .illustrations {
+    background-color: $lightRed;
+    background-image: url("../assets/pattern-illustrations.svg");
+    grid-column: span 2;
+    min-height: 9.5rem;
+  }
+
+  .photography {
+    background-color: $cyan;
+    background-image: url("../assets/pattern-photography.svg");
+    grid-column: span 2;
+    min-height: 11.375rem;
+  }
+
+  .motion {
+    background-color: $darkPurple;
+    background-image: url("../assets/pattern-motion-graphics.svg");
+    grid-column: span 2;
+    min-height: 11.375rem;
+  }
+}
+
+// Artist
+
+.artist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 6.25rem;
+
+  &__portrait {
+    max-height: 300px;
+    margin-bottom: 2.5rem;
+  }
+
+  &__heading {
+    font-size: $font-mobile-lg;
+    line-height: $line-mobile-md;
+    padding-inline: 1px;
+    margin-bottom: 1.5rem;
+  }
+
+  &__description {
+    color: $gray;
+    line-height: $line-mobile-sm;
+    margin-bottom: 1.5rem;
+  }
+
+  &__button {
+    background-color: $lightRed;
+  }
+}
+
+// Book
+
+.book {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $black;
+  color: $lightCream;
+  min-height: 22rem;
+  border-radius: 10px;
+  margin-bottom: 2.5rem;
+
+  &__heading {
+    font-size: $font-mobile-lg;
+    line-height: $line-mobile-md;
+    margin-bottom: 1.5rem;
+  }
+
+  &__description {
+    line-height: $font-mobile-lg;
+    padding-inline: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__button {
+    background-color: $lightRed;
+    max-width: 176px;
+  }
+}
