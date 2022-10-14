@@ -13,7 +13,11 @@ const App = () => {
   return (
     <>
       <header className="header">
-        <img src={Logo} alt="Logo" className="header__logo" />
+        <img
+          src={Logo}
+          alt="Single-page Design Portolio Logo"
+          className="header__logo"
+        />
         <button className="header__button">Free Consultation</button>
       </header>
 
@@ -27,7 +31,6 @@ const App = () => {
         </section>
 
         <section className="skills">
-          <h2 className="sr-only">Skills Section</h2>
           <ul className="skills__list">
             <li className="skills__item graphic">Graphic Design</li>
             <li className="skills__item ui">UI/UX</li>
@@ -39,13 +42,12 @@ const App = () => {
         </section>
 
         <section className="artist">
-          <h2 className="sr-only">Artist Section</h2>
           <img
             className="artist__portrait"
             src={Amy}
             alt="Headshot of Artist"
           />
-          <article className="artist__info">
+          <div className="artist__info">
             <h2 className="artist__heading">
               I'm Amy, and I'd love to work on your next project
             </h2>
@@ -55,7 +57,7 @@ const App = () => {
               mobile apps. I'm also handy with a camera!
             </p>
             <button className="artist__button">Free Consultation</button>
-          </article>
+          </div>
         </section>
 
         <section className="work">
@@ -87,52 +89,55 @@ const App = () => {
             <SwiperSlide>
               <img
                 src={require("./assets/image-slide-1.jpg")}
-                alt="Work Example"
+                alt="Abstract grid-like pattern with light blue gradiants"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 src={require("./assets/image-slide-2.jpg")}
-                alt="Work Example"
+                alt="Abstract pattern of assorted shapes"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 src={require("./assets/image-slide-3.jpg")}
-                alt="Work Example"
+                alt="Person holding a newspaper on a colorful background"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 src={require("./assets/image-slide-4.jpg")}
-                alt="Work Example"
+                alt="Book covering 'Graphic Design Solutions' covered in sticky notes"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 src={require("./assets/image-slide-5.jpg")}
-                alt="Work Example"
+                alt="Person holding phone showcasing a portolio website"
               />
             </SwiperSlide>
           </Swiper>
         </section>
 
         <section className="book">
-          <h2 className="sr-only">Booking Section</h2>
-          <article className="book__info">
+          <div className="book__info">
             <h3 className="book__heading">Book a call with me</h3>
             <p className="book__description">
               I'd love to have a chat to see how I can help you. The best first
               step is for us to discuss your project during a free consultation.
               Then we can move forward from there.
             </p>
-          </article>
+          </div>
           <button className="book__button">Free Consultation</button>
         </section>
       </main>
 
       <footer className="footer">
-        <img src={Logo} alt="Logo" className="footer__logo" />
+        <img
+          src={Logo}
+          alt="Single-page Design Portolio Logo"
+          className="footer__logo"
+        />
         <button className="footer__button">Free Consultation</button>
       </footer>
     </>
