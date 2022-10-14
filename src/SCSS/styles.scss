@@ -61,9 +61,12 @@ button {
   }
 }
 
-main,
 header,
-footer {
+footer,
+.design,
+.skills,
+.artist,
+.book {
   width: min(100% - 2rem, 1110px);
   margin-inline: auto;
 
@@ -172,7 +175,6 @@ footer {
 
   &__list {
     display: grid;
-    margin: 0;
     gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
 
@@ -188,7 +190,6 @@ footer {
   &__item {
     display: flex;
     align-items: flex-end;
-    max-width: 100%;
     font-weight: bold;
     color: $white;
     font-size: $font-mobile-md;
@@ -239,6 +240,11 @@ footer {
     @include mixins.md {
       grid-column: span 1;
     }
+
+    @include mixins.lg {
+      grid-column: 4;
+      grid-row: 1;
+    }
   }
 
   .motion {
@@ -249,7 +255,7 @@ footer {
 
     @include mixins.lg {
       grid-column: 4;
-      grid-row: 1;
+      grid-row: 2;
     }
   }
 }
@@ -337,6 +343,75 @@ footer {
   }
 }
 
+// Work
+
+.work {
+  text-align: center;
+  margin-bottom: 5.3125rem;
+
+  @include mixins.md {
+    margin-bottom: 7rem;
+  }
+
+  @include mixins.lg {
+    margin-bottom: 5rem;
+  }
+
+  &__heading {
+    font-size: $font-mobile-md;
+    line-height: 1.875rem;
+    margin-bottom: 2rem;
+
+    @include mixins.md {
+      font-size: $font-md;
+      line-height: $line-md;
+      margin-bottom: 3.5rem;
+    }
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  background-color: $black;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $galacticBlue;
+  }
+}
+
+.swiper-button-prev {
+  margin-right: 1rem;
+  background-image: url("../assets/icon-arrow-left.svg");
+}
+
+.swiper-button-next {
+  background-image: url("../assets/icon-arrow-right.svg");
+}
+
+.swiper-wrapper {
+  margin-bottom: 2rem;
+  @include mixins.md {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.swiper-slide {
+  border-radius: 10px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  max-width: 33.75rem;
+  border-radius: 10px;
+}
+
 // Book
 
 .book {
@@ -392,7 +467,7 @@ footer {
 
     @include mixins.lg {
       padding: 0;
-      max-width: 550px;
+      max-width: 34.375rem;
     }
   }
 

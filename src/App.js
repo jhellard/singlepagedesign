@@ -5,6 +5,10 @@ import "./SCSS/styles.scss";
 import Logo from "./assets/logo.svg";
 import Amy from "./assets/image-amy.webp";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+import "swiper/css";
+
 const App = () => {
   return (
     <>
@@ -52,46 +56,64 @@ const App = () => {
           </article>
         </section>
 
-        {/* <section className="work">
+        <section className="work">
           <h2 className="work__heading">My Work</h2>
-          <div className="work__carousel">
-            <ul className="work__list">
-              <li className="work__item">
-                <img
-                  src={require("./assets/image-slide-1.jpg")}
-                  alt="Work Example"
-                />
-              </li>
-              <li className="work__item">
-                <img
-                  src={require("./assets/image-slide-2.jpg")}
-                  alt="Work Example"
-                />
-              </li>
-              <li className="work__item">
-                <img
-                  src={require("./assets/image-slide-3.jpg")}
-                  alt="Work Example"
-                />
-              </li>
-              <li className="work__item">
-                <img
-                  src={require("./assets/image-slide-4.jpg")}
-                  alt="Work Example"
-                />
-              </li>
-              <li className="work__item">
-                <img
-                  src={require("./assets/image-slide-5.jpg")}
-                  alt="Work Example"
-                />
-              </li>
-            </ul>
-          </div>
-
-          <button className="work__button"></button>
-          <button className="work__button"></button>
-        </section> */}
+          <Swiper
+            modules={[Navigation]}
+            slidesPerView={1.37}
+            spaceBetween={15}
+            centeredSlides={true}
+            initialSlide={2}
+            slideToClickedSlide={true}
+            updateOnWindowResize={true}
+            navigation
+            breakpoints={{
+              640: {
+                slidesPerView: 1.5,
+              },
+              800: {
+                slidesPerView: 2,
+              },
+              1000: {
+                slidesPerView: 2.56,
+              },
+              1500: {
+                slidesPerView: 4,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <img
+                src={require("./assets/image-slide-1.jpg")}
+                alt="Work Example"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("./assets/image-slide-2.jpg")}
+                alt="Work Example"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("./assets/image-slide-3.jpg")}
+                alt="Work Example"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("./assets/image-slide-4.jpg")}
+                alt="Work Example"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={require("./assets/image-slide-5.jpg")}
+                alt="Work Example"
+              />
+            </SwiperSlide>
+          </Swiper>
+        </section>
 
         <section className="book">
           <article className="book__info">
