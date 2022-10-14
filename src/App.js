@@ -27,6 +27,7 @@ const App = () => {
         </section>
 
         <section className="skills">
+          <h2 className="sr-only">Skills Section</h2>
           <ul className="skills__list">
             <li className="skills__item graphic">Graphic Design</li>
             <li className="skills__item ui">UI/UX</li>
@@ -38,6 +39,7 @@ const App = () => {
         </section>
 
         <section className="artist">
+          <h2 className="sr-only">Artist Section</h2>
           <img
             className="artist__portrait"
             src={Amy}
@@ -116,6 +118,7 @@ const App = () => {
         </section>
 
         <section className="book">
+          <h2 className="sr-only">Booking Section</h2>
           <article className="book__info">
             <h3 className="book__heading">Book a call with me</h3>
             <p className="book__description">
