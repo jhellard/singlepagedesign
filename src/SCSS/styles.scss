@@ -59,13 +59,11 @@ button {
     font-size: 1rem;
     line-height: $line-sm;
   }
-
-  //TODO: Add Mixin for font size
 }
 
-// Main
-
-main {
+main,
+header,
+footer {
   width: min(100% - 2rem, 1110px);
   margin-inline: auto;
 
@@ -323,8 +321,6 @@ main {
     @include mixins.md {
       font-size: $font-sm;
       line-height: $line-sm;
-      //TODO: Fix padding
-      //   padding-inline: 3rem;
     }
 
     @include mixins.lg {
@@ -363,6 +359,7 @@ main {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
+    min-height: 20rem;
   }
 
   &__info {
@@ -408,24 +405,6 @@ main {
 
     @include mixins.lg {
       margin-right: 5.9375rem;
-    }
-  }
-}
-
-// Work
-
-.work {
-  position: relative;
-  &__list {
-    display: flex;
-    overflow: hidden;
-    gap: 1rem;
-  }
-
-  &__item {
-    position: absolute;
-    img {
-      min-width: 270px;
     }
   }
 }
