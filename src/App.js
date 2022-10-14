@@ -51,7 +51,7 @@ const App = () => {
             </h2>
             <p className="artist__description">
               I love working with others to create beautiful design solutions.
-              I've desgined everything from brand illustrations to complete
+              I've designed everything from brand illustrations to complete
               mobile apps. I'm also handy with a camera!
             </p>
             <button className="artist__button">Free Consultation</button>
