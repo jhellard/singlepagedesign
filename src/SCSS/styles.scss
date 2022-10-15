@@ -75,20 +75,6 @@ footer,
   }
 }
 
-.sr-only {
-  border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
-  -webkit-clip-path: inset(50%) !important;
-  clip-path: inset(50%) !important; /* 2 */
-  height: 1px !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  width: 1px !important;
-  white-space: nowrap !important; /* 3 */
-}
-
 // Header, Footer
 
 .header,
@@ -212,6 +198,10 @@ footer,
     background-position: top 24px right 24px;
     padding-bottom: 1.5rem;
     padding-left: 1.5rem;
+
+    @include mixins.lg {
+      max-height: 158px;
+    }
   }
 
   .graphic {
@@ -224,32 +214,46 @@ footer,
       grid-column: span 1;
       grid-row: span 2;
     }
+
+    @include mixins.lg {
+      grid-column: span 1;
+      grid-row: span 2;
+      max-height: 22.75rem;
+    }
   }
 
   .ui {
     background-color: $summerYellow;
     background-image: url("../assets/pattern-ui-ux.svg");
     height: 11.375rem;
+
+    @include mixins.md {
+      max-height: 182px;
+    }
   }
 
   .apps {
     background-color: $lightPink;
     background-image: url("../assets/pattern-apps.svg");
     height: 11.375rem;
+
+    @include mixins.md {
+      max-height: 182px;
+    }
   }
 
   .illustrations {
     background-color: $lightRed;
     background-image: url("../assets/pattern-illustrations.svg");
     grid-column: span 2;
-    min-height: 9.5rem;
+    min-height: 9.875rem;
   }
 
   .photography {
     background-color: $cyan;
     background-image: url("../assets/pattern-photography.svg");
     grid-column: span 2;
-    min-height: 11.375rem;
+    min-height: 182px;
 
     @include mixins.md {
       grid-column: span 1;
@@ -265,7 +269,11 @@ footer,
     background-color: $darkPurple;
     background-image: url("../assets/pattern-motion-graphics.svg");
     grid-column: span 2;
-    min-height: 11.375rem;
+    min-height: 182px;
+
+    @include mixins.md {
+      min-height: 158px;
+    }
 
     @include mixins.lg {
       grid-column: 4;

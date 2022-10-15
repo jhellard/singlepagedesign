@@ -30,10 +30,7 @@ const App = () => {
           </p>
         </section>
 
-        <section className="skills">
-          <h2 className="sr-only">
-            Skills section showcasing individiaul skills
-          </h2>
+        <div className="skills">
           <ul className="skills__list">
             <li className="skills__item graphic">Graphic Design</li>
             <li className="skills__item ui">UI/UX</li>
@@ -42,7 +39,7 @@ const App = () => {
             <li className="skills__item photography">Photography</li>
             <li className="skills__item motion">Motion Graphics</li>
           </ul>
-        </section>
+        </div>
 
         <section className="artist">
           <img
